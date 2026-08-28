@@ -138,6 +138,10 @@ h1 em, h2 em { color: var(--accent-soft); font-family: 'Playfair Display', serif
 .button { align-items: center; border-radius: 99px; display: inline-flex; font-size: 11px; font-weight: 800; gap: 12px; letter-spacing: .04em; padding: 15px 20px; text-transform: uppercase; transition: transform .2s, box-shadow .2s, background .3s, color .3s; }
 .button:hover { box-shadow: 0 8px 20px var(--shadow-button); transform: translateY(-3px); }
 .button-dark { background: var(--button-bg); color: var(--button-text); }
+.button-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.button-outline:hover { border-color: var(--text); background: var(--bg-card); }
+.nav-resume { align-items: center; border: 1px solid var(--accent); border-radius: 99px; color: var(--accent) !important; display: flex; gap: 6px; padding: 10px 15px; opacity: 1 !important; transition: background .2s, color .2s; }
+.nav-resume:hover { background: var(--accent); color: white !important; }
 .text-link { align-items: center; border-bottom: 1px solid var(--border-link); display: inline-flex; font-size: 12px; font-weight: 700; gap: 8px; padding-bottom: 4px; }
 .hero-art { align-self: center; background: var(--bg-hero-art); border-radius: 48% 52% 49% 51% / 44% 45% 55% 56%; height: 475px; justify-self: end; overflow: hidden; position: relative; transform: rotate(-8deg); width: min(470px, 100%); transition: background .3s; }
 .hero-grid { background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px); background-size: 34px 34px; inset: -20%; position: absolute; transform: rotate(8deg); }

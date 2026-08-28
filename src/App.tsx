@@ -4,6 +4,8 @@ import {
   BarChart3,
   BrainCircuit,
   Check,
+  Download,
+  FileText,
   Github,
   Linkedin,
   Mail,
@@ -82,6 +84,9 @@ function App() {
           <a href="#work" onClick={() => setMenuOpen(false)}>Work</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <a className="nav-resume" href="/Kirthana_P_Resume.pdf" download="Kirthana_P_Resume.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>
+            Resume <Download size={14} />
+          </a>
           <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle dark mode" aria-pressed={theme === 'dark'}>
             <span className="toggle-track">
               <Moon size={13} />
@@ -103,6 +108,9 @@ function App() {
           <p className="hero-intro">I’m Kirthana, an aspiring data scientist who turns complex ideas into clear stories, useful tools and experiences people remember.</p>
           <div className="hero-actions">
             <a className="button button-dark" href="#work">See my work <ArrowDownRight size={17} /></a>
+            <a className="button button-outline" href="/Kirthana_P_Resume.pdf" download="Kirthana_P_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              Resume <Download size={16} />
+            </a>
             <a className="text-link" href="mailto:kirthanirama14@gmail.com">Start a conversation <ArrowUpRight size={16} /></a>
           </div>
         </div>
@@ -143,7 +151,24 @@ function App() {
       <section className="about-section" id="about">
         <div className="wrap about-layout">
           <div className="about-stamp"><span>KP</span><div className="stamp-ring">DATA · STORIES · SYSTEMS · DATA · STORIES · SYSTEMS · </div></div>
-          <div className="about-copy"><span className="section-kicker">A little about me</span><h2>Part analyst.<br /><em>Part maker.</em></h2><p>I enjoy the part of technology that lives between the numbers and the people. Whether I’m building a learning simulation, exploring a dataset or shaping a presentation, I’m always looking for the clearest, most thoughtful way to make an idea land.</p><p>Currently building my foundation in computer science and engineering at CK College of Engineering and Technology, and looking for meaningful opportunities to learn, contribute and create.</p><p>I’ve also explored data science, UI development, front-end work, blockchain and fintech through five internships, including Netwrek Academy, Cavin InfoTech and Syscorp Technologies.</p><div className="about-facts"><div><strong>2021—2025</strong><span>B.E. Computer Science<br />& Engineering</span></div><div><strong>5 internships</strong><span>Data science · UI · Front-end</span></div><div><strong>Based in</strong><span>India · open to ideas</span></div></div><a className="text-link" href="mailto:kirthanirama14@gmail.com">Say hello <ArrowUpRight size={16} /></a></div>
+          <div className="about-copy">
+            <span className="section-kicker">A little about me</span>
+            <h2>Part analyst.<br /><em>Part maker.</em></h2>
+            <p>I enjoy the part of technology that lives between the numbers and the people. Whether I’m building a learning simulation, exploring a dataset or shaping a presentation, I’m always looking for the clearest, most thoughtful way to make an idea land.</p>
+            <p>Currently building my foundation in computer science and engineering at CK College of Engineering and Technology, and looking for meaningful opportunities to learn, contribute and create.</p>
+            <p>I’ve also explored data science, UI development, front-end work, blockchain and fintech through five internships, including Netwrek Academy, Cavin InfoTech and Syscorp Technologies.</p>
+            <div className="about-facts">
+              <div><strong>2021—2025</strong><span>B.E. Computer Science<br />& Engineering</span></div>
+              <div><strong>5 internships</strong><span>Data science · UI · Front-end</span></div>
+              <div><strong>Based in</strong><span>India · open to ideas</span></div>
+            </div>
+            <div style={{ display: 'flex', gap: '20px', alignItems: 'center', marginTop: '16px', flexWrap: 'wrap' }}>
+              <a className="button button-outline" href="/Kirthana_P_Resume.pdf" download="Kirthana_P_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                Download Resume <Download size={15} />
+              </a>
+              <a className="text-link" href="mailto:kirthanirama14@gmail.com">Say hello <ArrowUpRight size={16} /></a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -153,7 +178,16 @@ function App() {
       </section>
 
       <footer className="footer wrap" id="contact">
-        <div className="footer-prompt"><span className="section-kicker">Have a question or an idea?</span><h2>Let’s make it<br /><em>worth exploring.</em></h2><a className="button button-dark" href="mailto:kirthanirama14@gmail.com">Get in touch <ArrowUpRight size={17} /></a></div>
+        <div className="footer-prompt">
+          <span className="section-kicker">Have a question or an idea?</span>
+          <h2>Let’s make it<br /><em>worth exploring.</em></h2>
+          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '20px' }}>
+            <a className="button button-dark" href="mailto:kirthanirama14@gmail.com">Get in touch <ArrowUpRight size={17} /></a>
+            <a className="button button-outline" href="/Kirthana_P_Resume.pdf" download="Kirthana_P_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              Download Resume <Download size={16} />
+            </a>
+          </div>
+        </div>
         <div className="footer-bottom"><span>© 2025 Kirthana P</span><div className="socials"><a href="mailto:kirthanirama14@gmail.com" aria-label="Email"><Mail size={17} /></a><a href="https://www.linkedin.com/in/kirthana-p-4282b9304/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={17} /></a></div><span>Made with curiosity <Check size={15} /></span></div>
       </footer>
     </main>
