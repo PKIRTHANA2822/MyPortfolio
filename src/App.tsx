@@ -117,10 +117,24 @@ function App() {
         <div className="hero-art" aria-label="Abstract data visualization">
           <div className="orbit orbit-one" />
           <div className="orbit orbit-two" />
-          <div className="orbital-core"><Sparkles size={30} strokeWidth={1.4} /><span>ideas<br />in motion</span></div>
-          <div className="data-chip chip-one"><span className="chip-line" /> clarity</div>
-          <div className="data-chip chip-two">+84% <span>model accuracy</span></div>
-          <div className="data-chip chip-three"><span className="chip-pulse" /> curious</div>
+          <div className="orbit orbit-three" />
+          <div className="orbital-core">
+            <Sparkles size={30} strokeWidth={1.4} className="sparkle-icon" />
+            <span>ideas<br />in motion</span>
+          </div>
+
+          <div className="orbit-track track-one">
+            <div className="data-chip chip-one"><span className="chip-line" /> clarity</div>
+          </div>
+
+          <div className="orbit-track track-two">
+            <div className="data-chip chip-two">+84% <span>model accuracy</span></div>
+          </div>
+
+          <div className="orbit-track track-three">
+            <div className="data-chip chip-three"><span className="chip-pulse" /> curious</div>
+          </div>
+
           <div className="hero-grid" />
         </div>
       </section>

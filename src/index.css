@@ -144,15 +144,42 @@ h1 em, h2 em { color: var(--accent-soft); font-family: 'Playfair Display', serif
 .nav-resume:hover { background: var(--accent); color: white !important; }
 .text-link { align-items: center; border-bottom: 1px solid var(--border-link); display: inline-flex; font-size: 12px; font-weight: 700; gap: 8px; padding-bottom: 4px; }
 .hero-art { align-self: center; background: var(--bg-hero-art); border-radius: 48% 52% 49% 51% / 44% 45% 55% 56%; height: 475px; justify-self: end; overflow: hidden; position: relative; transform: rotate(-8deg); width: min(470px, 100%); transition: background .3s; }
+.hero-art:hover .orbit-track,
+.hero-art:hover .orbit { animation-play-state: running; }
 .hero-grid { background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px); background-size: 34px 34px; inset: -20%; position: absolute; transform: rotate(8deg); }
-.orbit { border: 1px solid var(--orbit-border); border-radius: 50%; left: 50%; position: absolute; top: 50%; transform: translate(-50%, -50%) rotate(42deg); z-index: 1; }
-.orbit-one { height: 320px; width: 490px; }
-.orbit-two { height: 470px; width: 290px; transform: translate(-50%, -50%) rotate(-33deg); }
-.orbital-core { align-items: center; background: var(--accent); border-radius: 50%; color: white; display: flex; flex-direction: column; font-family: 'DM Mono', monospace; font-size: 10px; height: 142px; justify-content: center; left: 50%; line-height: 1.35; position: absolute; text-align: center; top: 50%; transform: translate(-50%, -50%); width: 142px; z-index: 2; }
+.orbit { border: 1px solid var(--orbit-border); border-radius: 50%; left: 50%; position: absolute; top: 50%; z-index: 1; pointer-events: none; }
+.orbit-one { height: 320px; width: 470px; animation: spinClockwise 26s linear infinite; }
+.orbit-two { height: 450px; width: 300px; animation: spinCounterClockwise 34s linear infinite; }
+.orbit-three { border: 1px dashed var(--orbit-border); border-radius: 50%; height: 380px; width: 380px; opacity: .45; animation: spinClockwise 48s linear infinite; }
+.orbital-core { align-items: center; background: var(--accent); border-radius: 50%; color: white; display: flex; flex-direction: column; font-family: 'DM Mono', monospace; font-size: 10px; height: 142px; justify-content: center; left: 50%; line-height: 1.35; position: absolute; text-align: center; top: 50%; width: 142px; z-index: 2; animation: coreGlow 4s ease-in-out infinite; }
 .orbital-core svg { margin-bottom: 9px; }
-.data-chip { align-items: center; background: var(--bg-chip); border: 1px solid var(--border); border-radius: 99px; box-shadow: 0 8px 20px var(--shadow-chip); color: var(--text); display: flex; font-family: 'DM Mono', monospace; font-size: 10px; gap: 7px; padding: 11px 15px; position: absolute; transform: rotate(8deg); z-index: 3; transition: background .3s, color .3s, border-color .3s; }
-.chip-one { left: 38px; top: 100px; } .chip-two { right: 25px; top: 190px; } .chip-two span { color: var(--text-muted); font-size: 8px; } .chip-three { bottom: 92px; left: 60px; }
-.chip-line { background: var(--chip-line); height: 8px; width: 8px; } .chip-pulse { background: #a3bf62; border-radius: 50%; height: 8px; width: 8px; }
+.sparkle-icon { animation: sparkleSpin 5s ease-in-out infinite; }
+
+.orbit-track { position: absolute; left: 50%; top: 50%; width: 0; height: 0; pointer-events: none; z-index: 3; }
+.track-one { animation: revolveOrbitOne 22s linear infinite; }
+.track-two { animation: revolveOrbitTwo 30s linear infinite; }
+.track-three { animation: revolveOrbitThree 25s linear infinite; }
+
+.data-chip { align-items: center; background: var(--bg-chip); border: 1px solid var(--border); border-radius: 99px; box-shadow: 0 8px 20px var(--shadow-chip); color: var(--text); display: flex; font-family: 'DM Mono', monospace; font-size: 10px; gap: 7px; padding: 11px 15px; pointer-events: auto; white-space: nowrap; transition: box-shadow .2s, background .3s, color .3s, border-color .3s; }
+.data-chip:hover { border-color: var(--accent); box-shadow: 0 12px 28px rgba(0,0,0,0.35); }
+.chip-one { animation: counterRevolveOne 22s linear infinite; }
+.chip-two { animation: counterRevolveTwo 30s linear infinite; }
+.chip-two span { color: var(--text-muted); font-size: 8px; }
+.chip-three { animation: counterRevolveThree 25s linear infinite; }
+.chip-line { background: var(--chip-line); height: 8px; width: 8px; }
+.chip-pulse { background: #a3bf62; border-radius: 50%; height: 8px; width: 8px; animation: chipBlink 2s ease-in-out infinite; }
+
+@keyframes spinClockwise { 0% { transform: translate(-50%, -50%) rotate(0deg); } 100% { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes spinCounterClockwise { 0% { transform: translate(-50%, -50%) rotate(360deg); } 100% { transform: translate(-50%, -50%) rotate(0deg); } }
+@keyframes revolveOrbitOne { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes counterRevolveOne { 0% { transform: translate(-170px, -55px) rotate(0deg); } 100% { transform: translate(-170px, -55px) rotate(-360deg); } }
+@keyframes revolveOrbitTwo { 0% { transform: rotate(120deg); } 100% { transform: rotate(480deg); } }
+@keyframes counterRevolveTwo { 0% { transform: translate(110px, -80px) rotate(-120deg); } 100% { transform: translate(110px, -80px) rotate(-480deg); } }
+@keyframes revolveOrbitThree { 0% { transform: rotate(240deg); } 100% { transform: rotate(600deg); } }
+@keyframes counterRevolveThree { 0% { transform: translate(-30px, 125px) rotate(-240deg); } 100% { transform: translate(-30px, 125px) rotate(-600deg); } }
+@keyframes coreGlow { 0%, 100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 25px rgba(239, 118, 93, 0.35); } 50% { transform: translate(-50%, -50%) scale(1.04); box-shadow: 0 0 50px rgba(239, 118, 93, 0.65); } }
+@keyframes sparkleSpin { 0%, 100% { transform: rotate(0deg) scale(1); } 50% { transform: rotate(20deg) scale(1.15); } }
+@keyframes chipBlink { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .4; transform: scale(.75); } }
 .marquee { background: var(--bg-marquee); border-bottom: 1px solid var(--border-soft); border-top: 1px solid var(--border-soft); color: var(--text); overflow: hidden; padding: 17px 0; transform: rotate(-1.2deg) scale(1.02); transition: background .3s, color .3s; }
 .marquee-track { align-items: center; animation: slide 26s linear infinite; display: flex; font-family: 'DM Mono', monospace; font-size: 10px; gap: 30px; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; width: max-content; }
 .marquee i { color: var(--accent); font-style: normal; }
