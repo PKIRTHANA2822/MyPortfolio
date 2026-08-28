@@ -82,6 +82,7 @@ function App() {
         </a>
         <div className={`nav-links ${menuOpen ? 'is-open' : ''}`}>
           <a href="#work" onClick={() => setMenuOpen(false)}>Work</a>
+          <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
           <a className="nav-resume" href="/Kirthana_P_Resume.pdf" download="Kirthana_P_Resume.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>
@@ -159,6 +160,65 @@ function App() {
               </article>
             );
           })}
+        </div>
+      </section>
+
+      <section className="experience-section wrap" id="experience">
+        <div className="section-heading">
+          <div>
+            <span className="section-kicker">Work Experience</span>
+            <h2>Where ideas<br /><em>meet execution.</em></h2>
+          </div>
+          <p>Professional engineering, interactive systems, and hands-on industry experience.</p>
+        </div>
+
+        <div className="experience-list">
+          <div className="experience-card featured">
+            <div className="exp-badge">Current Position</div>
+            <div className="exp-header">
+              <div className="exp-title-block">
+                <h3>Digifox Studio</h3>
+                <span className="exp-role">Software & Immersive Developer</span>
+              </div>
+              <div className="exp-meta">
+                <span className="exp-period">May 2026 — Present</span>
+                <span className="exp-type">Industry Experience</span>
+              </div>
+            </div>
+            <p className="exp-desc">
+              Developing interactive simulation systems, spatial applications, and data-driven client-server workflows connecting modern interfaces with robust logic.
+            </p>
+            <div className="tag-row">
+              <span>Simulation Systems</span>
+              <span>Interactive UI</span>
+              <span>Unity 3D / C#</span>
+              <span>Full-Stack & APIs</span>
+              <span>Data Intelligence</span>
+            </div>
+          </div>
+
+          <div className="internship-grid">
+            <div className="internship-card">
+              <span className="intern-period">6 Months</span>
+              <h4>Netzwerk Academy</h4>
+              <p>Data Science & Machine Learning</p>
+            </div>
+            <div className="internship-card">
+              <span className="intern-period">1 Month</span>
+              <h4>Cavin InfoTech</h4>
+              <p>Unity Development & Interactive Systems</p>
+            </div>
+            <div className="internship-card">
+              <span className="intern-period">14 Days</span>
+              <h4>Syscorp Technologies</h4>
+              <p>Web Development & Frontend Architecture</p>
+            </div>
+            <div className="internship-card">
+              <span className="intern-period">1 Month</span>
+              <h4>Fintech Point</h4>
+              <p>Front-end Development & UI Engineering</p>
+            </div>
+          </div>
         </div>
       </section>
 
