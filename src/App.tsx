@@ -91,8 +91,8 @@ function App() {
             <span className="toggle-track">
               <Moon size={13} />
               <Sun size={13} />
-              <span className="toggle-thumb" />
             </span>
+            <span className="toggle-thumb" />
           </button>
           <a className="nav-cta" href="mailto:kirthanirama14@gmail.com">Let’s talk <ArrowUpRight size={15} /></a>
         </div>
