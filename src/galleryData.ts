@@ -1,7 +1,7 @@
-// Auto-generated gallery media manifest
+// Auto-generated gallery media manifest (Pure Images Only)
 export interface GalleryItem {
   id: string;
-  type: 'image' | 'video';
+  type: 'image';
   src: string;
   alt: string;
   title: string;
@@ -504,37 +504,5 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "The _last_tree_on _earth - storyboard",
     "title": "storyboard",
     "category": "The  last tree on  earth"
-  },
-  {
-    "id": "img-64",
-    "type": "image",
-    "src": "/gallery/images/video_and_audio_with_lip_sync_1_63.webp",
-    "alt": "video and audio with lip sync - 1",
-    "title": "1",
-    "category": "video and audio with lip sync"
-  },
-  {
-    "id": "vid-2",
-    "type": "video",
-    "src": "/gallery/videos/video_and_audio_with_lip_sync_1_1.mp4",
-    "alt": "video and audio with lip sync - 1",
-    "title": "1",
-    "category": "video and audio with lip sync"
-  },
-  {
-    "id": "img-65",
-    "type": "image",
-    "src": "/gallery/images/video_and_audio_with_lip_sync_2_64.webp",
-    "alt": "video and audio with lip sync - 2",
-    "title": "2",
-    "category": "video and audio with lip sync"
-  },
-  {
-    "id": "vid-3",
-    "type": "video",
-    "src": "/gallery/videos/video_and_audio_with_lip_sync_2_2.mp4",
-    "alt": "video and audio with lip sync - 2",
-    "title": "2",
-    "category": "video and audio with lip sync"
   }
 ];

@@ -196,3 +196,21 @@ main.sphere-main {
 .edge-fade--bottom {
   bottom: 0;
 }
+
+@media (max-width: 768px) {
+  .overlay--blur {
+    display: none;
+  }
+  .overlay {
+    background-image: radial-gradient(rgba(235, 235, 235, 0) 55%, var(--overlay-blur-color, #120F17) 95%);
+  }
+  .edge-fade {
+    height: 50px;
+  }
+  .item {
+    transition: none;
+  }
+  .item__image {
+    transition: none;
+  }
+}

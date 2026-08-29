@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useCallback } from 'react';
+import { useEffect, useMemo, useRef, useCallback, useState } from 'react';
 import { useGesture } from '@use-gesture/react';
 import './DomeGallery.css';
 
@@ -141,6 +141,20 @@ export default function DomeGallery({
   const focusedElRef = useRef<HTMLElement | null>(null);
   const originalTilePositionRef = useRef<{ left: number; top: number; width: number; height: number } | null>(null);
 
+  const [effectiveSegments, setEffectiveSegments] = useState<number>(segments);
+
+  useEffect(() => {
+    const updateSegments = () => {
+      const isMobile = window.innerWidth <= 768;
+      const isTablet = window.innerWidth <= 1024;
+      const count = isMobile ? Math.min(segments, 18) : isTablet ? Math.min(segments, 24) : segments;
+      setEffectiveSegments(count);
+    };
+    updateSegments();
+    window.addEventListener('resize', updateSegments, { passive: true });
+    return () => window.removeEventListener('resize', updateSegments);
+  }, [segments]);
+
   const rotationRef = useRef({ x: 0, y: 0 });
   const startRotRef = useRef({ x: 0, y: 0 });
   const startPosRef = useRef<{ x: number; y: number } | null>(null);
@@ -164,7 +178,7 @@ export default function DomeGallery({
     document.body.classList.remove('dg-scroll-lock');
   }, []);
 
-  const items = useMemo(() => buildItems(images, segments), [images, segments]);
+  const items = useMemo(() => buildItems(images, effectiveSegments), [images, effectiveSegments]);
 
   const applyTransform = (xDeg: number, yDeg: number) => {
     const el = sphereRef.current;
@@ -645,7 +659,7 @@ export default function DomeGallery({
                   onClick={onTileClick}
                   onPointerUp={onTilePointerUp}
                 >
-                  <img src={it.src} draggable={false} alt={it.alt} />
+                  <img src={it.src} draggable={false} alt={it.alt} loading="lazy" decoding="async" />
                 </div>
               </div>
             ))}
