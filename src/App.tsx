@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import DomeGallery from './DomeGallery';
+import ImageTrail from './ImageTrail';
 import { GALLERY_ITEMS } from './galleryData';
 
 const projects = [
@@ -325,6 +326,7 @@ function App() {
       </section>
 
       <footer className="footer wrap" id="contact">
+        <ImageTrail items={GALLERY_ITEMS.map((it) => it.src)} variant={1} />
         <div className="footer-prompt">
           <span className="section-kicker">Have a question or an idea?</span>
           <h2>Let’s make it<br /><em>worth exploring.</em></h2>

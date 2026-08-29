@@ -252,7 +252,14 @@ h3 { font-size: 25px; letter-spacing: -.06em; line-height: .98; margin: 13px 0 1
 .gallery-hint { color: var(--text-muted); font-family: 'DM Mono', monospace; font-size: 11px; }
 .gallery-dome-box { background: var(--overlay-blur-color, #120f17); border: 1px solid var(--border); border-radius: 28px; box-shadow: 0 24px 60px var(--shadow-card); height: 680px; overflow: hidden; position: relative; width: 100%; }
 
-.footer { border-top: 1px solid var(--border-soft); padding: 110px 0 26px; } .footer-prompt { text-align: center; } .footer-prompt h2 { margin: 20px 0 32px; } .footer-bottom { align-items: center; border-top: 1px solid var(--border-soft); color: var(--text-dim); display: flex; font-family: 'DM Mono', monospace; font-size: 9px; justify-content: space-between; margin-top: 115px; padding-top: 22px; text-transform: uppercase; } .footer-bottom span:last-child { align-items: center; display: flex; gap: 6px; } .socials { display: flex; gap: 17px; } .socials a { transition: color .2s, transform .2s; } .socials a:hover { color: var(--accent); transform: translateY(-2px); }
+.footer { border-top: 1px solid var(--border-soft); padding: 110px 0 26px; position: relative; overflow: hidden; min-height: 480px; display: flex; flex-direction: column; justify-content: space-between; }
+.footer-prompt { text-align: center; position: relative; z-index: 2; margin: auto 0; pointer-events: auto; }
+.footer-prompt h2 { margin: 20px 0 32px; }
+.footer-bottom { align-items: center; border-top: 1px solid var(--border-soft); color: var(--text-dim); display: flex; font-family: 'DM Mono', monospace; font-size: 9px; justify-content: space-between; margin-top: 80px; padding-top: 22px; text-transform: uppercase; position: relative; z-index: 2; pointer-events: auto; }
+.footer-bottom span:last-child { align-items: center; display: flex; gap: 6px; }
+.socials { display: flex; gap: 17px; }
+.socials a { transition: color .2s, transform .2s; }
+.socials a:hover { color: var(--accent); transform: translateY(-2px); }
 
 /* ===== RESPONSIVE MEDIA QUERIES ===== */
 @media (max-width: 900px) {
