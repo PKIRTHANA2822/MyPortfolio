@@ -80,8 +80,8 @@
   --shadow-card: #18202612;
   --shadow-chip: #4163701f;
   --shadow-button: #1820261a;
-  --orbit-border: #ffffff9e;
-  --grid-line: #ffffff35;
+  --orbit-border: rgba(16, 44, 87, 0.45);
+  --grid-line: rgba(16, 44, 87, 0.12);
   --sky: #b9dbe4;
   --lime: #d9e6ad;
   --coral: #f0b2a1;
@@ -95,7 +95,7 @@
   --visual-icon: #182026;
   --visual-ring: #1820264a;
   --visual-ring-alt: #1820263c;
-  --chip-line: #638c9c;
+  --chip-line: #102c57;
   --skill-hover-bg: #182026;
   --skill-hover-text: white;
   --brand-bg: #182026;

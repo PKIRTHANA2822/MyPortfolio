@@ -52,7 +52,23 @@ const projects = [
   },
 ];
 
-const skills = ['Python', 'SQL', 'Power BI', 'Tableau', 'Pandas', 'Matplotlib', 'Seaborn', 'AWS', 'Java'];
+const skills = [
+  'Python',
+  'Prompt Engineering',
+  'Generative AI',
+  'SQL',
+  'Power BI',
+  'Tableau',
+  'Pandas',
+  'NumPy',
+  'Scikit-learn',
+  'AWS',
+  'Figma',
+  'Canva',
+  'Unity 3D',
+  'Java',
+  'AI Media (GPT, Gemini, Veo, Kling)',
+];
 
 function getInitialTheme(): 'dark' | 'light' {
   if (typeof document !== 'undefined') {
@@ -186,11 +202,12 @@ function App() {
               </div>
             </div>
             <p className="exp-desc">
-              Developing interactive simulation systems, spatial applications, and data-driven client-server workflows connecting modern interfaces with robust logic.
+              Developing immersive simulation systems, interactive applications, and real-time backend integrations. Creating AI-generated images, videos, and advertising creatives with refined prompts using GPT, Gemini, Veo, Kling, Seedance, and Wan.
             </p>
             <div className="tag-row">
               <span>Simulation Systems</span>
-              <span>Interactive UI</span>
+              <span>AI Prompt Engineering</span>
+              <span>AI Media (GPT, Veo, Kling)</span>
               <span>Unity 3D / C#</span>
               <span>Full-Stack & APIs</span>
               <span>Data Intelligence</span>
