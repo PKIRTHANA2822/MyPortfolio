@@ -241,18 +241,21 @@ function App() {
 
       <section className="about-section" id="about">
         <div className="wrap about-layout">
-          <div className="about-stamp">
-            <span className="stamp-monogram">KP</span>
-            <svg className="stamp-svg" viewBox="0 0 300 300" aria-hidden="true">
+          <div className="about-stamp-wrapper">
+            <div className="about-stamp-core">
+              <span className="stamp-monogram">KP</span>
+            </div>
+            <svg className="stamp-svg" viewBox="0 0 340 340" aria-hidden="true">
               <defs>
                 <path
                   id="stampCirclePath"
-                  d="M 150, 150 m -112, 0 a 112,112 0 1,1 224,0 a 112,112 0 1,1 -224,0"
+                  d="M 170, 170 m -145, 0 a 145,145 0 1,1 290,0 a 145,145 0 1,1 -290,0"
                 />
               </defs>
+              <circle cx="170" cy="170" r="145" className="stamp-orbit-guide" fill="none" />
               <text className="stamp-curved-text">
                 <textPath href="#stampCirclePath" startOffset="0%">
-                  ✦ DATA ✦ STORIES ✦ SYSTEMS ✦ DATA ✦ STORIES ✦ SYSTEMS&nbsp;
+                  ✦ DATA ✦ STORIES ✦ SYSTEMS ✦ DATA ✦ STORIES ✦ SYSTEMS ✦ DATA ✦ STORIES ✦ SYSTEMS&nbsp;
                 </textPath>
               </text>
             </svg>

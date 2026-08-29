@@ -228,12 +228,14 @@ h3 { font-size: 25px; letter-spacing: -.06em; line-height: .98; margin: 13px 0 1
 .internship-card p { color: var(--text-muted); font-size: 12px; line-height: 1.5; margin: 0; }
 
 .about-section { background: var(--bg-alt); padding: 120px 0; transition: background .3s; }
-.about-layout { align-items: center; display: grid; gap: 12%; grid-template-columns: .8fr 1.2fr; }
-.about-stamp { align-items: center; background: var(--accent); border-radius: 50%; color: white; display: flex; height: 300px; justify-content: center; margin: auto; position: relative; width: 300px; box-shadow: 0 16px 40px rgba(239, 118, 93, 0.35); transition: transform .3s ease; }
-.about-stamp:hover { transform: scale(1.03); }
-.stamp-monogram { font-family: 'Playfair Display', serif; font-size: 74px; font-weight: 500; letter-spacing: -.08em; color: #ffffff; position: absolute; z-index: 2; user-select: none; }
-.stamp-svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 3; animation: rotateCurvedText 20s linear infinite; transform-origin: center center; will-change: transform; }
-.stamp-curved-text { fill: #ffffff; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+.about-layout { align-items: center; display: grid; gap: 10%; grid-template-columns: .95fr 1.05fr; }
+.about-stamp-wrapper { align-items: center; display: flex; height: 340px; justify-content: center; margin: auto; position: relative; width: 340px; max-width: 100%; }
+.about-stamp-core { align-items: center; background: var(--accent); border-radius: 50%; box-shadow: 0 16px 40px rgba(239, 118, 93, 0.35); display: flex; height: 220px; justify-content: center; position: relative; transition: transform .3s ease, box-shadow .3s ease; width: 220px; z-index: 2; }
+.about-stamp-wrapper:hover .about-stamp-core { transform: scale(1.04); box-shadow: 0 20px 48px rgba(239, 118, 93, 0.45); }
+.stamp-monogram { color: #ffffff; font-family: 'Playfair Display', serif; font-size: 68px; font-weight: 500; letter-spacing: -.08em; user-select: none; }
+.stamp-svg { animation: rotateCurvedText 24s linear infinite; height: 100%; inset: 0; pointer-events: none; position: absolute; transform-origin: center center; width: 100%; will-change: transform; z-index: 3; }
+.stamp-orbit-guide { stroke: var(--orbit-border); stroke-dasharray: 4 6; stroke-width: 1; opacity: .5; }
+.stamp-curved-text { fill: var(--text); font-family: 'DM Mono', monospace; font-size: 9.2px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; transition: fill .3s; }
 @keyframes rotateCurvedText { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 .about-copy { max-width: 500px; } .about-copy h2 { margin-bottom: 28px; } .about-copy p { color: var(--text-muted); font-size: 14px; line-height: 1.8; margin-bottom: 17px; }
 .about-facts { border-bottom: 1px solid var(--border-soft); border-top: 1px solid var(--border-soft); display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); margin: 28px 0 20px; padding: 18px 0; } .about-facts div { display: flex; flex-direction: column; gap: 7px; } .about-facts strong { color: var(--facts-strong); font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 500; text-transform: uppercase; } .about-facts span { color: var(--facts-text); font-size: 10px; line-height: 1.4; }
@@ -343,8 +345,9 @@ h3 { font-size: 25px; letter-spacing: -.06em; line-height: .98; margin: 13px 0 1
   .exp-meta { align-items: flex-start; }
   
   .about-layout { grid-template-columns: 1fr; gap: 40px; }
-  .about-stamp { height: 230px; width: 230px; }
-  .about-stamp > span { font-size: 54px; }
+  .about-stamp-wrapper { height: 270px; width: 270px; }
+  .about-stamp-core { height: 175px; width: 175px; }
+  .stamp-monogram { font-size: 52px; }
   .about-facts { grid-template-columns: repeat(3, 1fr); }
   
   .toolkit-content { grid-template-columns: 1fr; gap: 40px; margin-top: 40px; }
