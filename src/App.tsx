@@ -241,7 +241,22 @@ function App() {
 
       <section className="about-section" id="about">
         <div className="wrap about-layout">
-          <div className="about-stamp"><span>KP</span><div className="stamp-ring">DATA · STORIES · SYSTEMS · DATA · STORIES · SYSTEMS · </div></div>
+          <div className="about-stamp">
+            <span className="stamp-monogram">KP</span>
+            <svg className="stamp-svg" viewBox="0 0 300 300" aria-hidden="true">
+              <defs>
+                <path
+                  id="stampCirclePath"
+                  d="M 150, 150 m -112, 0 a 112,112 0 1,1 224,0 a 112,112 0 1,1 -224,0"
+                />
+              </defs>
+              <text className="stamp-curved-text">
+                <textPath href="#stampCirclePath" startOffset="0%">
+                  ✦ DATA ✦ STORIES ✦ SYSTEMS ✦ DATA ✦ STORIES ✦ SYSTEMS&nbsp;
+                </textPath>
+              </text>
+            </svg>
+          </div>
           <div className="about-copy">
             <span className="section-kicker">A little about me</span>
             <h2>Part analyst.<br /><em>Part maker.</em></h2>
