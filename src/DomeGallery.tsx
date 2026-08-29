@@ -63,7 +63,7 @@ interface GridItem {
 }
 
 function buildItems(pool: (string | DomeImage)[], seg: number): GridItem[] {
-  const xCols = Array.from({ length: seg }, (_, i) => -37 + i * 2);
+  const xCols = Array.from({ length: seg }, (_, i) => Math.round((i - (seg - 1) / 2) * 2));
   const evenYs = [-4, -2, 0, 2, 4];
   const oddYs = [-3, -1, 1, 3, 5];
 

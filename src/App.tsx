@@ -264,9 +264,9 @@ function App() {
         <div className="gallery-dome-box">
           <DomeGallery
             images={GALLERY_ITEMS.map((it) => ({ src: it.src, alt: it.alt }))}
-            fit={0.62}
-            minRadius={480}
-            segments={32}
+            fit={0.56}
+            minRadius={320}
+            segments={30}
             overlayBlurColor={theme === 'dark' ? '#0d1117' : '#f7f6f1'}
             grayscale={false}
             openedImageWidth="min(86vw, 540px)"
