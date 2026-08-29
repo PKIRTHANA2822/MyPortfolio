@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
-const sourceDir = path.join(__dirname, 'AI_Task (2)', 'AI_Task');
+const rootSourceDir = path.join(__dirname, 'AI_Task (2)');
 const outputImagesDir = path.join(__dirname, 'public', 'gallery', 'images');
 
 if (!fs.existsSync(outputImagesDir)) {
@@ -10,6 +10,7 @@ if (!fs.existsSync(outputImagesDir)) {
 }
 
 function getAllFiles(dir, fileList = []) {
+  if (!fs.existsSync(dir)) return fileList;
   const files = fs.readdirSync(dir);
   for (const file of files) {
     const filePath = path.join(dir, file);
@@ -25,8 +26,8 @@ function getAllFiles(dir, fileList = []) {
 }
 
 async function processMedia() {
-  const allFiles = getAllFiles(sourceDir);
-  console.log(`Found ${allFiles.length} image files to process.`);
+  const allFiles = getAllFiles(rootSourceDir);
+  console.log(`Found ${allFiles.length} image files to process across all folders.`);
 
   const mediaManifest = [];
   let imageCounter = 1;

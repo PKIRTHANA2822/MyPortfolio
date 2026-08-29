@@ -504,5 +504,61 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     "alt": "The _last_tree_on _earth - storyboard",
     "title": "storyboard",
     "category": "The  last tree on  earth"
+  },
+  {
+    "id": "img-64",
+    "type": "image",
+    "src": "/gallery/images/ugc_ad_1_63.webp",
+    "alt": "UGC AD - 1",
+    "title": "1",
+    "category": "UGC AD"
+  },
+  {
+    "id": "img-65",
+    "type": "image",
+    "src": "/gallery/images/ugc_ad_2_64.webp",
+    "alt": "UGC AD - 2",
+    "title": "2",
+    "category": "UGC AD"
+  },
+  {
+    "id": "img-66",
+    "type": "image",
+    "src": "/gallery/images/ugc_ad_3_65.webp",
+    "alt": "UGC AD - 3",
+    "title": "3",
+    "category": "UGC AD"
+  },
+  {
+    "id": "img-67",
+    "type": "image",
+    "src": "/gallery/images/ugc_ad_4_66.webp",
+    "alt": "UGC AD - 4",
+    "title": "4",
+    "category": "UGC AD"
+  },
+  {
+    "id": "img-68",
+    "type": "image",
+    "src": "/gallery/images/ugc_ad_5_67.webp",
+    "alt": "UGC AD - 5",
+    "title": "5",
+    "category": "UGC AD"
+  },
+  {
+    "id": "img-69",
+    "type": "image",
+    "src": "/gallery/images/ugc_ad_6_68.webp",
+    "alt": "UGC AD - 6",
+    "title": "6",
+    "category": "UGC AD"
+  },
+  {
+    "id": "img-70",
+    "type": "image",
+    "src": "/gallery/images/ugc_ad_7_69.webp",
+    "alt": "UGC AD - 7",
+    "title": "7",
+    "category": "UGC AD"
   }
 ];
