@@ -50,6 +50,9 @@
   --brand-bg: #e6edf3;
   --brand-text: #0d1117;
   --quote-text: #e6edf3;
+  --text-marquee: #e6edf3;
+  --stamp-ring-bg: rgba(13, 17, 23, 0.65);
+  --stamp-ring-text: #ffffff;
 }
 
 /* ===== LIGHT THEME ===== */
@@ -98,6 +101,9 @@
   --brand-bg: #182026;
   --brand-text: #f7f6f1;
   --quote-text: inherit;
+  --text-marquee: #f7f6f1;
+  --stamp-ring-bg: rgba(24, 32, 38, 0.88);
+  --stamp-ring-text: #ffffff;
 }
 
 * { box-sizing: border-box; }
@@ -180,7 +186,7 @@ h1 em, h2 em { color: var(--accent-soft); font-family: 'Playfair Display', serif
 @keyframes coreGlow { 0%, 100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 25px rgba(239, 118, 93, 0.35); } 50% { transform: translate(-50%, -50%) scale(1.04); box-shadow: 0 0 50px rgba(239, 118, 93, 0.65); } }
 @keyframes sparkleSpin { 0%, 100% { transform: rotate(0deg) scale(1); } 50% { transform: rotate(20deg) scale(1.15); } }
 @keyframes chipBlink { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .4; transform: scale(.75); } }
-.marquee { background: var(--bg-marquee); border-bottom: 1px solid var(--border-soft); border-top: 1px solid var(--border-soft); color: var(--text); overflow: hidden; padding: 17px 0; transform: rotate(-1.2deg) scale(1.02); transition: background .3s, color .3s; }
+.marquee { background: var(--bg-marquee); border-bottom: 1px solid var(--border-soft); border-top: 1px solid var(--border-soft); color: var(--text-marquee); overflow: hidden; padding: 17px 0; transform: rotate(-1.2deg) scale(1.02); transition: background .3s, color .3s; }
 .marquee-track { align-items: center; animation: slide 26s linear infinite; display: flex; font-family: 'DM Mono', monospace; font-size: 10px; gap: 30px; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; width: max-content; }
 .marquee i { color: var(--accent); font-style: normal; }
 @keyframes slide { to { transform: translateX(-50%); } }
@@ -225,7 +231,7 @@ h3 { font-size: 25px; letter-spacing: -.06em; line-height: .98; margin: 13px 0 1
 .about-layout { align-items: center; display: grid; gap: 12%; grid-template-columns: .8fr 1.2fr; }
 .about-stamp { align-items: center; background: var(--accent); border-radius: 50%; color: white; display: flex; height: 300px; justify-content: center; margin: auto; position: relative; width: 300px; animation: stampSway 6s ease-in-out infinite; box-shadow: 0 12px 36px rgba(239, 118, 93, 0.32); }
 .about-stamp > span { font-family: 'Playfair Display', serif; font-size: 70px; letter-spacing: -.1em; }
-.stamp-ring { animation: ringOscillate 7s ease-in-out infinite; bottom: 24px; font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: .14em; position: absolute; white-space: nowrap; }
+.stamp-ring { animation: ringOscillate 7s ease-in-out infinite; bottom: 22px; font-family: 'DM Mono', monospace; font-size: 8.5px; font-weight: 600; letter-spacing: .14em; position: absolute; white-space: nowrap; background: var(--stamp-ring-bg); color: var(--stamp-ring-text); padding: 6px 14px; border-radius: 99px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28); backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.15); }
 @keyframes stampSway { 0%, 100% { transform: rotate(-13deg) translateY(0); } 50% { transform: rotate(-7deg) translateY(-8px); } }
 @keyframes ringOscillate { 0%, 100% { transform: rotate(-8deg); opacity: 0.9; } 50% { transform: rotate(8deg); opacity: 1; } }
 .about-copy { max-width: 500px; } .about-copy h2 { margin-bottom: 28px; } .about-copy p { color: var(--text-muted); font-size: 14px; line-height: 1.8; margin-bottom: 17px; }
