@@ -7,6 +7,7 @@ import {
   Download,
   FileText,
   Github,
+  Image as ImageIcon,
   Linkedin,
   Mail,
   Menu,
@@ -18,6 +19,8 @@ import {
   X,
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import DomeGallery from './DomeGallery';
+import { GALLERY_ITEMS } from './galleryData';
 
 const projects = [
   {
@@ -99,6 +102,7 @@ function App() {
         <div className={`nav-links ${menuOpen ? 'is-open' : ''}`}>
           <a href="#work" onClick={() => setMenuOpen(false)}>Work</a>
           <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
+          <a href="#gallery" onClick={() => setMenuOpen(false)}>AI Gallery</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
           <a className="nav-resume" href="/Kirthana_P_Resume.pdf" download="Kirthana_P_Resume.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>
@@ -236,6 +240,40 @@ function App() {
               <p>Front-end Development & UI Engineering</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="gallery-section wrap" id="gallery">
+        <div className="gallery-heading">
+          <div>
+            <span className="section-kicker">3D Spatial Experience</span>
+            <h2>Generative AI &<br /><em>Visual Media.</em></h2>
+          </div>
+          <p>
+            An interactive 3D spatial dome featuring AI-generated narrative scenes, cinematic camera perspectives, and prompt media created with Gemini, GPT, Veo & Kling.
+          </p>
+        </div>
+
+        <div className="gallery-bar">
+          <div className="gallery-badge">
+            <Sparkles size={13} /> {GALLERY_ITEMS.length} Curated AI Creations
+          </div>
+          <span className="gallery-hint">✦ Click & Drag to explore in 3D • Click any tile to inspect</span>
+        </div>
+
+        <div className="gallery-dome-box">
+          <DomeGallery
+            images={GALLERY_ITEMS.map((it) => ({ src: it.src, alt: it.alt }))}
+            fit={0.62}
+            minRadius={480}
+            segments={32}
+            overlayBlurColor={theme === 'dark' ? '#0d1117' : '#f7f6f1'}
+            grayscale={false}
+            openedImageWidth="min(86vw, 540px)"
+            openedImageHeight="min(86vw, 540px)"
+            imageBorderRadius="20px"
+            openedImageBorderRadius="24px"
+          />
         </div>
       </section>
 
