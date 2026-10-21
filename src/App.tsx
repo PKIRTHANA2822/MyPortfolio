@@ -6,16 +6,21 @@ import {
   Check,
   Download,
   FileText,
+  FlaskConical,
   Github,
   Image as ImageIcon,
   Linkedin,
+  Lock,
   Mail,
   Menu,
   MessageCircle,
   Moon,
   Network,
+  ShieldAlert,
   Sparkles,
   Sun,
+  Users,
+  Video,
   X,
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -54,6 +59,66 @@ const projects = [
     tone: 'coral',
     icon: Network,
   },
+  {
+    number: '04',
+    title: 'AI-Based Behavioural\nSafety Awareness Video',
+    type: 'Generative AI project',
+    description:
+      'Created AI-generated visual content focused on behavioural safety awareness. Generated images using text prompts and converted selected images into videos using AI tools. Refined prompts to improve visual clarity, scene composition, and motion consistency.',
+    tags: ['ChatGPT Pro', 'Kling AI', 'Prompt Engineering', 'Image-to-Video'],
+    tone: 'sky',
+    icon: Video,
+  },
+  {
+    number: '05',
+    title: 'AI-Based Industrial\nSafety Video',
+    type: 'Generative AI project',
+    description:
+      'Developed AI-generated visual content demonstrating industrial safety practices and workplace hazards. Generated images from text prompts and transformed them into videos using AI-based tools. Optimized prompts to improve industrial environments and scene continuity.',
+    tags: ['ChatGPT Pro', 'Kling AI', 'Generative AI', 'Prompt Engineering'],
+    tone: 'lime',
+    icon: ShieldAlert,
+  },
+  {
+    number: '06',
+    title: 'AI-Based Visitor\nSafety Awareness Video',
+    type: 'Generative AI project',
+    description:
+      'Created AI-assisted visual content highlighting visitor safety procedures and precautions in industrial environments. Used prompt engineering to generate images and convert them into video sequences. Refined generated visuals based on the intended safety message.',
+    tags: ['ChatGPT Pro', 'Kling AI', 'AI Image Generation', 'Image-to-Video'],
+    tone: 'coral',
+    icon: Users,
+  },
+  {
+    number: '07',
+    title: 'AI-Based Chemical\nSafety Awareness Video',
+    type: 'Generative AI project',
+    description:
+      'Developed AI-generated visuals illustrating chemical safety awareness and safe handling practices. Generated images through detailed prompts and converted the images into videos using AI tools. Improved visual composition through iterative prompt refinement.',
+    tags: ['ChatGPT Pro', 'Kling AI', 'Generative AI', 'Prompt Engineering'],
+    tone: 'sky',
+    icon: FlaskConical,
+  },
+  {
+    number: '08',
+    title: 'AI-Based Cybersecurity\nAwareness Video',
+    type: 'Generative AI project',
+    description:
+      'Created AI-generated visual content focused on cybersecurity awareness. Designed prompts to represent digital security concepts and transformed generated images into video content. Refined visual storytelling and motion to support the awareness message.',
+    tags: ['ChatGPT Pro', 'Kling AI', 'AI Image Generation', 'Image-to-Video'],
+    tone: 'lime',
+    icon: Lock,
+  },
+  {
+    number: '09',
+    title: 'AI-Generated 2D\nVisual Content Project',
+    type: 'Generative AI project',
+    description:
+      'Created 2D visual content using AI-powered image generation techniques. Converted AI-generated images into video sequences using image-to-video tools. Optimized prompts to improve visual style, composition, and consistency across scenes.',
+    tags: ['ChatGPT Pro', 'Generative AI Tools', 'Prompt Engineering', 'AI Image-to-Video'],
+    tone: 'coral',
+    icon: ImageIcon,
+  },
 ];
 
 const skills = [
@@ -72,6 +137,35 @@ const skills = [
   'Unity 3D',
   'Java',
   'AI Media (GPT, Gemini, Veo, Kling)',
+  // Generative AI
+  'AI Image Generation',
+  'AI Video Generation',
+  'Generative AI Workflows',
+  'Visual Content Creation',
+  // Prompt Engineering
+  'Prompt Design',
+  'Prompt Optimization',
+  'Iterative Prompting',
+  'Visual Direction',
+  'Output Refinement',
+  // Visual Production
+  'Industrial Visualization',
+  'Machinery & Equipment Visualization',
+  '2D Visual Content',
+  '3D Visual Content',
+  'Lighting',
+  'Composition',
+  'Camera Movement',
+  'Motion Consistency',
+  // AI Tools
+  'OpenArt',
+  'ChatGPT',
+  'Kling AI',
+  'Gemini',
+  'Veo',
+  'Wan AI',
+  'ElevenLabs',
+  'Pollo AI',
 ];
 
 function getInitialTheme(): 'dark' | 'light' {
@@ -199,7 +293,7 @@ function App() {
             <div className="exp-header">
               <div className="exp-title-block">
                 <h3>Digifox Studio</h3>
-                <span className="exp-role">Software & Immersive Developer</span>
+                <span className="exp-role">Generative AI &amp; Visual Content Creator</span>
               </div>
               <div className="exp-meta">
                 <span className="exp-period">May 2026 — Present</span>
@@ -207,15 +301,17 @@ function App() {
               </div>
             </div>
             <p className="exp-desc">
-              Developing immersive simulation systems, interactive applications, and real-time backend integrations. Creating AI-generated images, videos, and advertising creatives with refined prompts using GPT, Gemini, Veo, Kling, Seedance, and Wan.
+              Creating AI-generated images, videos, and visual content for creative and industrial projects. Developing prompt-to-image and image-to-video workflows using generative AI tools. Designed and optimized prompts for industrial manufacturing environments, machinery, and equipment visualization. Created one 2D and three 3D visual content projects using generative AI technologies. Applied prompt engineering to improve lighting, composition, camera movement, visual quality, and motion consistency. Refined AI-generated content based on project requirements and feedback.
             </p>
             <div className="tag-row">
-              <span>Simulation Systems</span>
-              <span>AI Prompt Engineering</span>
-              <span>AI Media (GPT, Veo, Kling)</span>
-              <span>Unity 3D / C#</span>
-              <span>Full-Stack & APIs</span>
-              <span>Data Intelligence</span>
+              <span>Generative AI</span>
+              <span>AI Image Generation</span>
+              <span>AI Video Generation</span>
+              <span>Prompt Engineering</span>
+              <span>Industrial Visualization</span>
+              <span>2D &amp; 3D Visual Content</span>
+              <span>ChatGPT</span>
+              <span>Kling AI</span>
             </div>
           </div>
 
